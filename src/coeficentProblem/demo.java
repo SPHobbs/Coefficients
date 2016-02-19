@@ -48,8 +48,13 @@ public class demo {
 		private void print(String message, int n, double[]solution){
 			
 		}
-		public double[]evaluate(int n, double[][]coefficients, double[]solution){
-			
+		public double[]evaluate(int n, double[][]coefficients, double[]rightSides, double[]solution){
+			for(int i=0;i<n;i++){
+				for(int j=0;j<n;j++){
+					rightSides[i]+=coefficients[i][j]*solution[j];
+				}
+			}
+			return rightSides;
 		}	
 		private void print(String message, int n,double[]origRS, double[]checkRS){
 			
