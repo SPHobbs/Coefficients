@@ -43,10 +43,23 @@ public class demo {
 			
 		}
 		private static void print(String message, int n, double[][]coefficients, double[]rightSide){
+			System.out.print("The coefficients of the equation are: ");
+			for(int i=0;i<n;i++){
+				for(int j=0;j<n;j++){
+					System.out.print(coefficients[i][j]);
+				}
+			}
 			
+			System.out.print("The solutions to the equation are: ");
+			for(int i=0;i<n;i++){
+				System.out.print(rightSide[i]);
+			}
 		}
 		private void print(String message, int n, double[]solution){
-			
+			System.out.print("The solutions to the equation are: ");
+			for(int i=0;i<n;i++){
+				System.out.print(solution[i]);
+			}
 		}
 		public double[]evaluate(int n, double[][]coefficients, double[]rightSides, double[]solution){
 			for(int i=0;i<n;i++){
@@ -60,6 +73,6 @@ public class demo {
 			
 		}
 		public static void main(String[]args){
-			
+			new demo().setUp();
 		}
 }
